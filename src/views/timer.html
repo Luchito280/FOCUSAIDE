@@ -1,0 +1,27 @@
+<div class="view-content timer-view">
+    <h1 class="view-title balloon-title">
+        <span style="--c: #a0c4ff;">F</span><span style="--c: #9bf6ff;">O</span><span style="--c: #ffc6ff;">C</span><span style="--c: #9bf6ff;">U</span><span style="--c: #fdffb6;">S</span>
+    </h1>
+    <div class="timer-wrapper">
+        <svg id="progress-ring" width="280" height="280">
+            <defs>
+                <linearGradient id="work-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#81D4FA;" />
+                    <stop offset="100%" style="stop-color:#a0c4ff;" />
+                </linearGradient>
+                <linearGradient id="rest-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#a5d6a7;" />
+                    <stop offset="100%" style="stop-color:#caffbf;" />
+                </linearGradient>
+            </defs>
+            <circle class="progress-ring-bg" cx="140" cy="140" r="130" />
+            <circle class="progress-ring-circle" cx="140" cy="140" r="130" />
+        </svg>
+        <div id="timer-display">25:00</div>
+    </div>
+    <h2 id="status-title">Tiempo de Estudio</h2>
+    <div class="controls">
+        <button id="start-stop-btn">Iniciar</button>
+        <button id="reset-btn">Reiniciar</button>
+    </div>
+</div>

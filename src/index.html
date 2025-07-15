@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>FOCUSAIDE</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- BARRA LATERAL DE NAVEGACIÓN -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <img src="assets/images/mascota.png" alt="FOCUSAIDE Logo" class="sidebar-logo">
+            </div>
+            <ul class="sidebar-menu">
+                <li><button id="timer-view-btn" class="view-btn active"><img src="assets/icons/timer.svg" alt="Temporizador"><span>Temporizador</span></button></li>
+                <li><button id="tasks-view-btn" class="view-btn"><img src="assets/icons/tasks.svg" alt="Tareas"><span>Tareas</span></button></li>
+                <li><button id="settings-view-btn" class="view-btn"><img src="assets/icons/settings.svg" alt="Configuración"><span>Configuración</span></button></li>
+            </ul>
+            <div id="status-container">
+                <div id="status-led" class="led-off"></div>
+                <p id="connection-status">Iniciando...</p>
+            </div>
+        </nav>
+
+        <!-- CONTENEDOR PRINCIPAL DE LAS VISTAS -->
+        <main id="main-view">
+            <div id="timer-view" class="view-content active">
+                <div class="method-selector-container">
+                    <label for="method-select">Método de Enfoque:</label>
+                    <select id="method-select">
+                        <option value="pomodoro">Pomodoro (25/5)</option>
+                        <option value="rule5217">Regla 52-17</option>
+                        <option value="method9030">Método 90/30</option>
+                        <option value="method4515">Método 45/15</option>
+                        <option value="deepWork">Foco Profundo (120/30)</option>
+                        <option value="custom">Personalizado</option>
+                    </select>
+                </div>
+                <div id="custom-time-inputs" class="hidden">
+                    <input type="number" id="work-time-input" placeholder="Trabajo (min)">
+                    <input type="number" id="rest-time-input" placeholder="Descanso (min)">
+                </div>
+                <div class="timer-wrapper">
+                    <svg id="progress-ring" width="260" height="260">
+                        <circle class="progress-ring-bg" cx="130" cy="130" r="120" />
+                        <circle class="progress-ring-circle" cx="130" cy="130" r="120" />
+                    </svg>
+                    <div id="timer-display">25:00</div>
+                </div>
+                <h1 id="status-title">Tiempo de Estudio</h1>
+                <div class="controls">
+                    <button id="start-stop-btn" disabled>Iniciar</button>
+                    <button id="reset-btn" disabled>Reiniciar</button>
+                </div>
+            </div>
+            <div id="tasks-view" class="view-content hidden">
+                <h1 class="view-title">Mis Tareas Pendientes</h1>
+                <form id="add-task-form">
+                    <input type="text" id="task-input" placeholder="Añadir nueva tarea..." autocomplete="off" required>
+                    <button type="submit" aria-label="Añadir tarea">+</button>
+                </form>
+                <ul id="task-list"></ul>
+            </div>
+            <div id="settings-view" class="view-content hidden">
+                <h1 class="view-title">Configuración y Bloqueo</h1>
+                <div class="setting-section">
+                    <label for="blocklist-textarea">Sitios a bloquear durante el enfoque:</label>
+                    <p class="setting-description">Añade un sitio por línea (ej: youtube.com, facebook.com)</p>
+                    <textarea id="blocklist-textarea" rows="6" placeholder="youtube.com"></textarea>
+                    <button id="save-blocklist-btn">Guardar Sitios</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <div id="quit-message" class="hidden">Saliendo...</div>
+    <script src="renderer.js" defer></script>
+</body>
+</html>
