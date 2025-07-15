@@ -1,0 +1,5 @@
+opencv-python
+dlib
+websockets
+numpy
+scikit-learn
