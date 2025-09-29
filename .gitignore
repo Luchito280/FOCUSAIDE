@@ -1,0 +1,58 @@
+# ## Archivos de Log y de Configuración Local ##
+# Ignora todos los archivos de registro y variables de entorno.
+*.log
+.env
+
+# ## Dependencias de Node.js / Electron ##
+# La carpeta node_modules es la más importante a ignorar.
+# Se puede reinstalar en cualquier momento con 'npm install'.
+/node_modules
+npm-debug.log*
+yarn-error.log
+
+# ## Build Output (Electron Builder) ##
+# Carpetas donde se generan los instaladores y archivos de la aplicación.
+/dist
+/release
+*.exe
+*.zip
+*.rar
+*.7z
+*.dmg
+*.pkg
+
+# ## Python ##
+# Ignora los archivos de caché, compilados y entornos virtuales.
+__pycache__/
+*.pyc
+*build/
+*dist/
+*.egg-info/
+
+# Entornos virtuales comunes
+venv/
+env/
+.venv/
+.env/
+
+# ## PyInstaller ##
+# Archivos generados al compilar el script de Python a .exe.
+*.spec
+# El .exe generado en la carpeta 'engine' tampoco debe subirse.
+engine/*.exe
+
+# ## Archivos de Modelo Grandes ##
+# Los modelos de Dlib son muy grandes y no deben estar en Git.
+# Es mejor que quien clone el proyecto los descargue por separado.
+*.dat
+
+# ## Archivos Generados por el Sistema Operativo ##
+# Basura común de macOS, Windows y Linux.
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ## Directorios de Editores de Código ##
+# Configuraciones específicas del editor de cada desarrollador.
+.vscode/
+.idea/

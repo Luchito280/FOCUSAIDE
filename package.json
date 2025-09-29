@@ -1,0 +1,26 @@
+{
+  "name": "focusaide-beta",
+  "version": "0.1.0",
+  "description": "Beta funcional de FOCUSAIDE, una app para mejorar el enfoque.",
+  "main": "main.js",
+  "scripts": {
+    "start:electron": "electron .",
+    "start:python": "python engine/main_engine.py",
+    "start": "concurrently \"npm:start:electron\" \"npm:start:python\"",
+    "build": "electron-builder --win"
+  },
+  "author": "Grupo FOCUSAIDE",
+  "license": "ISC",
+  "dependencies": {
+    "@fullcalendar/core": "^6.1.19",
+    "@fullcalendar/daygrid": "^6.1.19",
+    "@fullcalendar/timegrid": "^6.1.19",
+    "sudo-prompt": "^9.2.1",
+    "ws": "^8.17.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "electron": "^31.0.1",
+    "electron-builder": "^24.13.3"
+  }
+}

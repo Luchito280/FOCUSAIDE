@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self'; 
+    script-src 'self' https://embed.tawk.to wss://*.tawk.to; 
+    connect-src 'self' https://*.tawk.to wss://*.tawk.to;
+    style-src 'self' 'unsafe-inline';
+    img-src 'self' https: data:;
+    font-src 'self' https: data:;
+    frame-src 'self' https://tawk.to;
+">
+    <title>FOCUSAIDE</title>
+    <meta http-equiv="Content-Security-Policy" content="webview-src https://*.tawk.to 'self'">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.15/index.global.min.js'></script>
+    <link href='https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css' rel='stylesheet'>
+    <link href='https://cdn.jsdelivr.net/npm/@fullcalendar/core/main.min.css' rel='stylesheet' />
+</head>
+<body>
+    <div class="app-container">
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h1 class="sidebar-title">FOCUSAIDE</h1>
+            </div>
+            <ul class="sidebar-menu">
+                <li><button id="timer-view-btn" data-view="timer" class="view-btn active icon-timer"><span>Temporizador</span></button></li>
+                <li><button id="tasks-view-btn" data-view="tasks" class="view-btn icon-tasks"><span>Tareas</span></button></li>
+                <li><button id="chat-view-btn" data-view="chat" class="view-btn icon-chat"><span>Chat de Soporte</span></button></li>
+                <li><button id="settings-view-btn" data-view="settings" class="view-btn icon-settings"><span>Configuración</span></button></li>
+            </ul>
+            <div id="status-container">
+                <div id="status-led" class="led-off"></div>
+                <p id="connection-status">Iniciando...</p>
+            </div>
+        </nav>
+        <main id="main-content"></main>
+    </div>
+    <div id="gaze-dot"></div>
+    <div id="distraction-overlay" class="distraction-hidden"></div>
+    <audio id="alert-sound" src="../assets/sounds/alert.mp3" preload="auto"></audio>
+
+    <script src="renderer.js" type="module" defer></script>
+</body>
+</html>
