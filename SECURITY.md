@@ -8,8 +8,8 @@ Dado que FocusAide está en desarrollo activo, solo la versión más reciente re
 
 | Versión | Soportada          |
 | ------- | ------------------ |
-| >= 1.0.0 (Última) | :white_check_mark: |
-| < 1.0.0 (Antiguas)  | :x:                |
+| >= 0.1.0 (Última) | :white_check_mark: |
+| < 0.1.0 (Antiguas)  | :x:                |
 
 ## Reportando una Vulnerabilidad
 
