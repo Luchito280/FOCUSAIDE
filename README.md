@@ -16,7 +16,7 @@ FocusAide no es solo un temporizador, es un ecosistema completo para mantenerte 
 
 * **Alertas Visuales y Auditivas:** Cuando se detecta una distracción durante una sesión de trabajo, la aplicación activa simultáneamente una animación visual en la interfaz y una señal de audio sutil y no intrusiva para reorientar tu atención sin interrumpir tu flujo.
 
-* **Gestor de Tareas con Calendario:** Mantén tus objetivos claros. La aplicación incluye una sección de tareas donde puedes añadir, completar y eliminar pendientes. Estas tareas se integran en un calendario interactivo para que puedas visualizar tu progreso y planificar tus sesiones.
+* **Gestor de Tareas:** Mantén tus objetivos claros. La aplicación incluye una sección de tareas donde puedes añadir, completar y eliminar pendientes. Estas tareas se integran en una lista interactiva para que puedas visualizar tu progreso y planificar tus sesiones.
 
 * **Soporte por Chat en Vivo:** ¿Necesitas ayuda? Hay una pestaña de "Soporte" dedicada en la barra lateral que integra un servicio de chat en vivo (como Tawk.to) para que puedas obtener asistencia al instante.
 
