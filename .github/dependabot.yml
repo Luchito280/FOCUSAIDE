@@ -1,0 +1,22 @@
+# .github/dependabot.yml
+
+version: 2
+updates:
+
+  # Sección para mantener actualizadas las dependencias de Node.js / npm
+  - package-ecosystem: "npm"
+    directory: "/" # La raíz del proyecto, donde está package.json
+    schedule:
+      interval: "weekly" # Revisa por actualizaciones una vez a la semana
+    commit-message:
+      prefix: "npm-deps"
+      include: "scope"
+
+  # Sección para mantener actualizadas las dependencias de Python / pip
+  - package-ecosystem: "pip"
+    directory: "/engine" # La carpeta donde está requirements.txt
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: "pip-deps"
+      include: "scope"
