@@ -1,26 +1,46 @@
 {
-  "name": "focusaide-beta",
-  "version": "0.1.0",
-  "description": "Beta funcional de FOCUSAIDE, una app para mejorar el enfoque.",
+  "name": "focusaide",
+  "version": "1.0.0",
+  "description": "Una aplicación para mejorar la concentración y el enfoque.",
   "main": "main.js",
   "scripts": {
+    "start": "concurrently \"npm:start:electron\" \"npm:start:python\"",
     "start:electron": "electron .",
     "start:python": "python engine/main_engine.py",
-    "start": "concurrently \"npm:start:electron\" \"npm:start:python\"",
-    "build": "electron-builder --win"
+    "build": "electron-builder"
   },
-  "author": "Grupo FOCUSAIDE",
+  "keywords": [
+    "pomodoro",
+    "focus",
+    "productivity"
+  ],
+  "author": "Tu Nombre Aquí",
   "license": "ISC",
   "dependencies": {
-    "@fullcalendar/core": "^6.1.19",
-    "@fullcalendar/daygrid": "^6.1.19",
-    "@fullcalendar/timegrid": "^6.1.19",
-    "sudo-prompt": "^9.2.1",
-    "ws": "^8.17.0"
+    "sudo-prompt": "^9.2.1"
   },
   "devDependencies": {
     "concurrently": "^8.2.2",
-    "electron": "^31.0.1",
+    "electron": "^31.2.1",
     "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.focusaide.app",
+    "productName": "FocusAide",
+    "win": {
+      "target": "nsis",
+      "icon": "assets/icon.ico"
+    },
+    "files": [
+      "**/*",
+      "!engine/*.py",
+      "!engine/*.dat"
+    ],
+    "extraResources": [
+      {
+        "from": "engine/fca_tracker_svc.exe",
+        "to": "app/engine/fca_tracker_svc.exe"
+      }
+    ]
   }
 }
